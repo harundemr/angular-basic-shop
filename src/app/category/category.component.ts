@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from './category';
 
 @Component({
   selector: 'app-category',
@@ -8,7 +9,29 @@ import { Component, OnInit } from '@angular/core';
 export class CategoryComponent implements OnInit {
 
   constructor() { }
-
+  title = "Kategory Listesi";
+  categories: Category[] = [
+    {
+      id: 1,
+      name: "Unlu Mamüller",      
+    },
+    {
+      id: 2,
+      name: "Elektronik",      
+    },
+    {
+      id: 3,
+      name: "Gıda",      
+    },
+    {
+      id: 4,
+      name: "Müzik",      
+    },
+    {
+      id: 5,
+      name: "Kahvaltı",      
+    }
+  ]
   ngOnInit(): void {
   }
 
