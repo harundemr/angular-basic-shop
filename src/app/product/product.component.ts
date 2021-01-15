@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
-declare let alertify: any;
+import { AlertifyService } from '../services/alertify.service'
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,7 +8,7 @@ declare let alertify: any;
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alertifyService: AlertifyService) { }
   title = "Ürün Listesi"
   filterText = ""
   products: Product[] = [
@@ -46,8 +46,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToCart(product:Product){
-    alertify.success(product.name + " sepete eklendi!");
+  addToCart(product: Product) {
+    this.alertifyService.success(product.name + " sepete eklendi!");
   }
 
 }
