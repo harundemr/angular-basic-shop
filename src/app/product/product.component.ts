@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 import { AlertifyService } from '../services/alertify.service'
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,42 +9,14 @@ import { AlertifyService } from '../services/alertify.service'
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private alertifyService: AlertifyService) { }
+  constructor(private alertifyService: AlertifyService,private http: HttpClient) { }
   title = "Ürün Listesi"
   filterText = ""
-  products: Product[] = [
-    {
-      id: 1,
-      name: "Bal",
-      description: "Organik Bal",
-      price: 15.99,
-    },
-    {
-      id: 2,
-      name: "Pekmez",
-      description: "Organik Pekmez",
-      price: 20.99,
-    },
-    {
-      id: 3,
-      name: "Tarhana",
-      description: "Organik ev yapımı tarhana",
-      price: 45.99,
-    },
-    {
-      id: 4,
-      name: "Erişte",
-      description: "Organik ev yapımı Erişte",
-      price: 45.99,
-    },
-    {
-      id: 5,
-      name: "Reçel",
-      description: "Organik ev yapımı Reçel",
-      price: 45.99,
-    },
-  ];
+  products: Product[] = [];
   ngOnInit(): void {
+    this.http.get<Product[]>("http://localhost:3000/products").subscribe(data=>{
+      this.products = data;
+    })
   }
 
   addToCart(product: Product) {
