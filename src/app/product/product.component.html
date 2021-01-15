@@ -11,9 +11,9 @@
     <div class="col-md-3" *ngFor="let product of products | productFilter:filterText">
         <div class="card" style="margin:8px;">
             <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
+                <h5 class="card-title">{{product.name}} - {{product.price}}</h5>
                 <p class="card-text">{{product.description}}</p>
-                <a href="#" class="btn btn-primary">{{product.price}}</a>
+                <a (click)="addToCart(product)" class="btn btn-primary">Sepete Ekle</a>
             </div>
         </div>
     </div>
