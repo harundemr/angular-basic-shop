@@ -8,6 +8,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductAddClassicComponent } from './product-add-classic/product-add-classic.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     CategoryComponent,
     ProductComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ProductAddClassicComponent
   ],
   imports: [
     BrowserModule,
