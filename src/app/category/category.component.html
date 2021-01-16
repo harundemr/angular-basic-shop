@@ -1,5 +1,8 @@
-<h3>{{title}}</h3>
-<div class="list-group" id="list-tab" role="tablist" style="padding: 8px;">
-    <a *ngFor="let category of categories" class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
-        routerLink="products/c/{{category.id}}" role="tab" aria-controls="settings">{{category.name}}</a>
-</div>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="products">Tümü</a>
+    </li>
+    <li class="nav-item" *ngFor="let category of categories" >
+        <a class="nav-link" routerLink="products/c/{{category.id}}">{{category.name}}</a>
+    </li>
+</ul>
