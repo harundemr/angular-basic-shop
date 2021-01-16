@@ -1,15 +1,15 @@
 {
     "products":[
-        {"id":1,"name":"Tarhana","description":"Organik ev yapımı tarhana","price":15.99},
-        {"id":2,"name":"Erişte","description":"Organik ev yapımı Erişte","price":15.99},
-        {"id":3,"name":"Elma Pekmezi","description":"Organik ev yapımı Elma Pekmezi","price":15.99},
-        {"id":4,"name":"Reçel","description":"Organik ev yapımı Reçel","price":15.99},
-        {"id":5,"name":"Çiçek Balı","description":"Organik ev yapımı Çiçek Balı","price":15.99},
-        {"id":6,"name":"Kestane Reçeli","description":"Organik ev yapımı Kestane Reçeli","price":15.99},
-        {"id":7,"name":"Kestane Balı","description":"Organik ev yapımı Kestane Balı","price":15.99},
-        {"id":8,"name":"Siyez Unlu Tarhana","description":"Organik ev yapımı Siyez Unlu Tarhana","price":15.99},
-        {"id":9,"name":"Sebzeli Erişte","description":"Organik ev yapımı Sebzeli Erişte","price":15.99},
-        {"id":10,"name":"Ihlamur","description":"Organik ev yapımı Ihlamur","price":15.99}
+        {"id":1, "categoryId":1, "name":"Tarhana","description":"Organik ev yapımı tarhana","price":15.99},
+        {"id":2, "categoryId":2, "name":"Erişte","description":"Organik ev yapımı Erişte","price":15.99},
+        {"id":3, "categoryId":3, "name":"Elma Pekmezi","description":"Organik ev yapımı Elma Pekmezi","price":15.99},
+        {"id":4, "categoryId":5, "name":"Reçel","description":"Organik ev yapımı Reçel","price":15.99},
+        {"id":5, "categoryId":1, "name":"Çiçek Balı","description":"Organik ev yapımı Çiçek Balı","price":15.99},
+        {"id":6, "categoryId":2, "name":"Kestane Reçeli","description":"Organik ev yapımı Kestane Reçeli","price":15.99},
+        {"id":7, "categoryId":3, "name":"Kestane Balı","description":"Organik ev yapımı Kestane Balı","price":15.99},
+        {"id":8, "categoryId":4, "name":"Siyez Unlu Tarhana","description":"Organik ev yapımı Siyez Unlu Tarhana","price":15.99},
+        {"id":9, "categoryId":5, "name":"Sebzeli Erişte","description":"Organik ev yapımı Sebzeli Erişte","price":15.99},
+        {"id":10, "categoryId":3, "name":"Ihlamur","description":"Organik ev yapımı Ihlamur","price":15.99}
     ],
     "categories":[
         {"id":1,"name":"Unlu Mamüller"},
