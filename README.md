@@ -1,27 +1,57 @@
-# AngularSimpleShop
+# Merhaba!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+Bu benim angular öğrenme serüvenimde geliştirmiş olduğum ilk uygulamadır. Amacım angular frameworkünü temel anlamda öğrenmek ve uygulamaktır.
 
-## Development server
+* * *
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Kullandığım Bileşen ve Kütüphaneler
 
-## Code scaffolding
+*   Angular CLI 11.0.7
+*   TypeScript 4.0.2
+*   Bootstrap
+*   BootsWatch / Litera
+*   Font Awesome
+*   Alertfy Js
+*   Json Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* * *
 
-## Build
+### Uygulamanın Özellikleri
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+*   Ürünleri Listeleme
+*   Ürün Ekleme (Authorize Kontrollü) - Klasik Form Kullanıldı
+*   Kategori Listeleme
+*   Kategori Ekleme (Authorize Kontrollü) - Reactive Form Kullanıldı
+*   Login ve LogOut İşlemleri
+*   Kategorilere Göre Ürün Filtreleme
+*   Ürün İsmi Aramasına Göre Ürün Filtreleme
+*   Tüm Operasyonlarda Alertfy İle Alert Gösterimi
+*   Sepete Ekleme (Sadece Alertfy Uyarısı Gösterilir)
 
-## Running unit tests
+* * *
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Açıklamalar
 
-## Running end-to-end tests
+*   Öncelikle bu proje angular ile geliştirdiğim ilk proje olması sebebiyle bazı noktaları öğrenmek için birtakım önemli detaylar es geçilmiştir.
+*   Proje angular'ın component yapısına uygun şekilde geliştirilmiştir. Oluşturduğum componentler category, product,login,product-add,category-add,nav componentleridir.
+*   Ayrıca backend ile iletişim ve bazı operasyonlar için servisler oluşturulmuştur. Oluşturduğum serviceler CategoryService, ProductService, AccountService, AlertfyService serviceleridir.
+*   Login işlem kontrolleri için CanActivated dan türettiğim LoginGuard classı oluşturulmuştur. app-routing.module.ts dosyası üzerinden de login kontrolü yapılacak route'lara canActivate olarak eklenerek ilgili linklere erişimde kontolün gerçekleşmesi sağlanmıştır.
+*   AccountService içerisinde oturum bilgilisi LocaleStorage ye eklenmiş ve logOut sırasında silinerek oturum sonlandırılmıştır. Fakat LocaleStorage kullanımından kaynaklı uygulama servisi yeniden başlatıldığında oturum bilgileri silinmektedir.
+*   Proje genelinde kullanılan iki adet form vardır. Öğrenmek amacıyla product ekleme formu klasik form yöntemiyle, category ekleme formu reactive form yöntemiyle yapılmıştır.
+*   Projede kullanılan her iki form dada validation işlemleri yapılmıştır ve reactive form kullanımında comoponentin ts dosyasından birçok işlemin gerçekleştirilebilmesi daha rahat olduğundan sonraki projelerde reactive form kullanma kararı alınmıştır.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* * *
 
-## Further help
+### Uygulamayı Ayağa Kaldırmak için;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Öncelikle node js, angular cli ve json-server bilgisayarınız da yüklü olduğundan emin olun.
+
+1.  Projeyi github'dan indirdiniz ve vs code ile açtınız.
+2.  Terminal'den "npm install" komutu çalıştırıp node paketlerinin yüklenmesini sağlıyoruz.
+3.  Terminal'den proje ana dizinine yani db.json dosyasının olduğu dizinde olduğumuzdan emin oluyoruz ve "json-server -w db.json" komutunu çalıştırarak back-end servisimizi aktif ediyoruz.
+4.  Mevcut terminal penceresini kapatmadan yeni bir terminal penceresi açıyoruz ve ng serve --open komutunu çalışıtıyoruz.
+5.  Proje tarayıcıda açılacaktır.
+
+* * *
+
+Daha fazla bilgi için bana linked in üzerinden ulaşabilirsiniz. [Tıklayın.](https://www.linkedin.com/in/harundemirp/)
