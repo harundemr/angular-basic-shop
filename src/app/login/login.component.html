@@ -1,0 +1,9 @@
+<main class="form-signin">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <input type="text" id="userName" formControlName="userName" name="userName" [(ngModel)]="model.userName" class="form-control" placeholder="Kullanıcı Adı" required autofocus>
+        <br>
+        <input type="password" id="password" formControlName="password" name="password" [(ngModel)]="model.password" class="form-control" placeholder="Password" required>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="loginForm.invalid">Sign in</button>
+    </form>
+</main>

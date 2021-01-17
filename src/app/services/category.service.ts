@@ -11,7 +11,6 @@ export class CategoryService {
 
   getCategory(): Observable<Category[]> {
     return this.http.get<Category[]>(this.path).pipe(
-      tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
@@ -33,7 +32,6 @@ export class CategoryService {
     }
 
     return this.http.post<Category>(this.path, category, httpOptions).pipe(
-      tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
   }

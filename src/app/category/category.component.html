@@ -1,8 +1,5 @@
 <ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link active" routerLink="products">Tümü</a>
-    </li>
     <li class="nav-item" *ngFor="let category of categories" >
-        <a class="nav-link" routerLink="products/c/{{category.id}}">{{category.name}}</a>
+        <a class="nav-link" routerLink="p/c/{{category.id}}" routerLinkActive="active">{{category.name}}</a>
     </li>
 </ul>

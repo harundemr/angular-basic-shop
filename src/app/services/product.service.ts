@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Product } from '../product/product';
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
-import { isDefined } from '@angular/compiler/src/util';
 @Injectable()
 export class ProductService {
 
@@ -12,11 +11,10 @@ export class ProductService {
 
   getProduct(categoryId?: number): Observable<Product[]> {
     let newPath = this.path;
-    if (categoryId) {
+    if (categoryId && categoryId != 0) {
       newPath += "?categoryId=" + categoryId
     }
     return this.http.get<Product[]>(newPath).pipe(
-      tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
@@ -37,7 +35,6 @@ export class ProductService {
       })
     }
     return this.http.post<Product>(this.path, product, httpOptions).pipe(
-      tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
   }

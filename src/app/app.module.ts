@@ -10,6 +10,10 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductAddClassicComponent } from './product-add-classic/product-add-classic.component';
 import { CategoryAddReactiveComponent } from './category-add-reactive/category-add-reactive.component';
+import { LoginComponent } from './login/login.component';
+import { AccountService } from './services/account.service';
+import { AlertifyService } from './services/alertify.service';
+import { LoginGuard } from './login/login.guard';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { CategoryAddReactiveComponent } from './category-add-reactive/category-a
     ProductComponent,
     ProductFilterPipe,
     ProductAddClassicComponent,
-    CategoryAddReactiveComponent
+    CategoryAddReactiveComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { CategoryAddReactiveComponent } from './category-add-reactive/category-a
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [AccountService,AlertifyService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

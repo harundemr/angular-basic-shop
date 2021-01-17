@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../services/account.service';
+import { AlertifyService } from '../services/alertify.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  isLoggedIn(): boolean {
+    return this.accountService.isLoggedIn();
+  }
+
+  logOut() {
+    this.accountService.logOut();
+  }
 }

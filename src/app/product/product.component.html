@@ -8,8 +8,8 @@
         <input class="form-control" type="text" placeholder="Search..." [(ngModel)]="filterText" />
     </div>
     <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products | productFilter:filterText">
-            <div class="card" style="margin:8px;">
+        <div class="col-lg-2 col-md-3 col-sm-4" *ngFor="let product of products | productFilter:filterText" >
+            <div class="card" style="width:auto;margin-top:32px;">
                 <img src="assets/img/logo.png" class="card-img-top" alt="..." >
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}} - {{product.price}}</h5>
