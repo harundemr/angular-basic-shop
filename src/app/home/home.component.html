@@ -1,0 +1,102 @@
+<div class="jumbotron">
+  <h1 class="display-3">Merhaba!</h1>
+  <p class="lead">
+    Bu benim angular öğrenme serüvenimde geliştirmiş olduğum ilk uygulamadır.
+    Amacım angular frameworkünü temel anlamda öğrenmek ve uygulamaktır.
+  </p>
+  <hr class="my-4" />
+  <h3>Kullandığım Bileşen ve Kütüphaneler</h3>
+  <ul>
+    <li>Angular CLI 11.0.7</li>
+    <li>TypeScript 4.0.2</li>
+    <li>Bootstrap</li>
+    <li>BootsWatch / Litera</li>
+    <li>Font Awesome</li>
+    <li>Alertfy Js</li>
+    <li>Json Server</li>
+  </ul>
+  <hr class="my-4" />
+  <h3>Uygulamanın Özellikleri</h3>
+  <ul>
+    <li>Ürünleri Listeleme</li>
+    <li>Ürün Ekleme (Authorize Kontrollü) - Klasik Form Kullanıldı</li>
+    <li>Kategori Listeleme</li>
+    <li>Kategori Ekleme (Authorize Kontrollü) - Reactive Form Kullanıldı</li>
+    <li>Login ve LogOut İşlemleri</li>
+    <li>Kategorilere Göre Ürün Filtreleme</li>
+    <li>Ürün İsmi Aramasına Göre Ürün Filtreleme</li>
+    <li>Tüm Operasyonlarda Alertfy İle Alert Gösterimi</li>
+    <li>Sepete Ekleme (Sadece Alertfy Uyarısı Gösterilir)</li>
+  </ul>
+  <hr class="my-4" />
+  <h4>Açıklamalar</h4>
+  <ul>
+    <li>
+      Öncelikle bu proje angular ile geliştirdiğim ilk proje olması sebebiyle
+      bazı noktaları öğrenmek için birtakım önemli detaylar es geçilmiştir.
+    </li>
+    <li>
+      Proje angular'ın component yapısına uygun şekilde geliştirilmiştir.
+      Oluşturduğum componentler category,
+      product,login,product-add,category-add,nav componentleridir.
+    </li>
+    <li>
+      Ayrıca backend ile iletişim ve bazı operasyonlar için servisler
+      oluşturulmuştur. Oluşturduğum serviceler CategoryService, ProductService,
+      AccountService, AlertfyService serviceleridir.
+    </li>
+    <li>
+      Login işlem kontrolleri için CanActivated dan türettiğim LoginGuard classı
+      oluşturulmuştur. app-routing.module.ts dosyası üzerinden de login kontrolü
+      yapılacak route'lara canActivate olarak eklenerek ilgili linklere erişimde
+      kontolün gerçekleşmesi sağlanmıştır.
+    </li>
+    <li>
+      AccountService içerisinde oturum bilgilisi LocaleStorage ye eklenmiş ve
+      logOut sırasında silinerek oturum sonlandırılmıştır. Fakat LocaleStorage
+      kullanımından kaynaklı uygulama servisi yeniden başlatıldığında oturum
+      bilgileri silinmektedir.
+    </li>
+    <li>
+      Proje genelinde kullanılan iki adet form vardır. Öğrenmek amacıyla product
+      ekleme formu klasik form yöntemiyle, category ekleme formu reactive form
+      yöntemiyle yapılmıştır.
+    </li>
+    <li>
+      Projede kullanılan her iki form dada validation işlemleri yapılmıştır ve
+      reactive form kullanımında comoponentin ts dosyasından birçok işlemin
+      gerçekleştirilebilmesi daha rahat olduğundan sonraki projelerde reactive
+      form kullanma kararı alınmıştır.
+    </li>
+  </ul>
+  <hr class="my-4" />
+  <h3>Uygulamayı Ayağa Kaldırmak için;</h3>
+  <p>
+    Öncelikle node js, angular cli ve json-server bilgisayarınız da yüklü
+    olduğundan emin olun.
+  </p>
+  <ol>
+    <li>Projeyi github'dan indirdiniz ve vs code ile açtınız.</li>
+    <li>
+      Terminal'den "npm install" komutu çalıştırıp node paketlerinin
+      yüklenmesini sağlıyoruz.
+    </li>
+    <li>
+      Terminal'den proje ana dizinine yani db.json dosyasının olduğu dizinde
+      olduğumuzdan emin oluyoruz ve "json-server -w db.json" komutunu
+      çalıştırarak back-end servisimizi aktif ediyoruz.
+    </li>
+    <li>
+      Mevcut terminal penceresini kapatmadan yeni bir terminal penceresi
+      açıyoruz ve ng serve --open komutunu çalışıtıyoruz.
+    </li>
+    <li>Proje tarayıcıda açılacaktır.</li>
+  </ol>
+  <hr class="my-4" />
+  <p class="lead">
+    Daha fazla bilgi için bana linked in üzerinden ulaşabilirsiniz.
+    <a href="https://www.linkedin.com/in/harundemirp/" target="blank">
+      Tıklayın.</a
+    >
+  </p>
+</div>

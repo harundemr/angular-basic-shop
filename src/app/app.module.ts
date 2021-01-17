@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { AccountService } from './services/account.service';
 import { AlertifyService } from './services/alertify.service';
 import { LoginGuard } from './login/login.guard';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginGuard } from './login/login.guard';
     ProductFilterPipe,
     ProductAddClassicComponent,
     CategoryAddReactiveComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
